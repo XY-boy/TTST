@@ -4,7 +4,7 @@ Wuhan University and Huawei Technology
 
 This is the official PyTorch implementation of our paper entitled "TTST: A Top-*k* Token Selective Transformer for Remote Sensing Imagery Super-Resolution", which is submitted to ISPRS J P&RS.
 ### 🖼️Visual comparison against SOTAs
- ![image](dota.png)
+ ![image](/fig/dota.png)
 ### 🧩Usage
 Coming soon!
 
