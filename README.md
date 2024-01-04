@@ -54,11 +54,11 @@ If you find our work helpful in your research, please consider citing it. We app
 ```
 @article{xiao2024ttst,
   title={TTST: A Top-k Token Selective Transformer for Remote Sensing Image Super-Resolution},
-  author={Xiao, Yi and Yuan, Qiangqiang and Jiang, Kui and He, Jiang and Chia-Wen Lin and Zhang, Liangpei},
+  author={Xiao, Yi and Yuan, Qiangqiang and Jiang, Kui and He, Jiang and Lin, Chia-Wen and Zhang, Liangpei},
   journal={IEEE Transactions on Image Processing},
   year={2024},
   volume={33},
   pages={1-15},
-  doi={10.1109/TGRS.2023.3341437}
+  doi={10.1109/TIP.2023.3349004}
 }
 ```
