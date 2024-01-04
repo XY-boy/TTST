@@ -17,8 +17,10 @@ git clone https://github.com/XY-boy/TTST.git
 ```
 
 ## Environment
- * CUDA 10.0
- * PyTorch 1.x
+ * CUDA 11.1
+ * Python 3.9.13
+ * PyTorch 1.9.1
+ * Torchvision 0.10.1
 
 ## 🎁 Dataset
 Please download the following remote sensing benchmarks:
@@ -26,12 +28,20 @@ Please download the following remote sensing benchmarks:
 | :----: | :-----: | :----: | :----: | :----: |
 |Training | [Download](https://captain-whu.github.io/AID/) | None | None | None |
 |Testing | [Download](https://captain-whu.github.io/AID/) | [Download](https://captain-whu.github.io/DOTA/dataset.html) | [Download](https://drive.google.com/drive/folders/1UdlgHk49iu6WpcJ5467iT-UqNPpx__CC) | [Download](https://onedrive.live.com/?authkey=%21AHHNaHIlzp%5FIXjs&id=5C5E061130630A68%21107&cid=5C5E061130630A68&parId=root&parQt=sharedby&o=OneUp)
-
+## 🧩 Usage
+### Train
+```
+python train_4x.py
+```
+### Test
+```
+python eval_4x.py
+```
 ## 🖼️ Results
-### Quantitative comparison
+### Quantitative
  ![image](/fig/red.png)
 
-### Visual comparison
+### Visual
  ![image](/fig/dota.png)
 
 ## Contact
@@ -46,7 +56,9 @@ If you find our work helpful in your research, please consider citing it. We app
   title={TTST: A Top-k Token Selective Transformer for Remote Sensing Image Super-Resolution},
   author={Xiao, Yi and Yuan, Qiangqiang and Jiang, Kui and He, Jiang and Chia-Wen Lin and Zhang, Liangpei},
   journal={IEEE Transactions on Image Processing},
-  volume={},
-  pages={},
   year={2024},
+  volume={33},
+  pages={1-15},
+  doi={10.1109/TGRS.2023.3341437}
+}
 ```
