@@ -17,10 +17,10 @@ git clone https://github.com/XY-boy/TTST.git
 ```
 
 ## Environment
- * CUDA 11.1
- * Python 3.9.13
- * PyTorch 1.9.1
- * Torchvision 0.10.1
+ > * CUDA 11.1
+ > * Python 3.9.13
+ > * PyTorch 1.9.1
+ > * Torchvision 0.10.1
 
 ## 🎁 Dataset
 Please download the following remote sensing benchmarks:
@@ -46,7 +46,7 @@ python eval_4x.py
 
 ## Contact
 If you have any questions or suggestions, feel free to contact me.  
-Email: xiao_yi@whu.edu.cn; Tel: (+86) 15927574475 (WeChat)
+Email: xiao_yi@whu.edu.cn; xy574475@gmail.com
 
 ## Citation
 If you find our work helpful in your research, please consider citing it. We appreciate your support！😊
