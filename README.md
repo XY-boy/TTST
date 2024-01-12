@@ -52,13 +52,14 @@ Email: xiao_yi@whu.edu.cn; xy574475@gmail.com
 If you find our work helpful in your research, please consider citing it. We appreciate your support！😊
 
 ```
-@article{xiao2024ttst,
-  title={TTST: A Top-k Token Selective Transformer for Remote Sensing Image Super-Resolution},
+@ARTICLE{xiao2024ttst,
   author={Xiao, Yi and Yuan, Qiangqiang and Jiang, Kui and He, Jiang and Lin, Chia-Wen and Zhang, Liangpei},
-  journal={IEEE Transactions on Image Processing},
+  journal={IEEE Transactions on Image Processing}, 
+  title={TTST: A Top-k Token Selective Transformer for Remote Sensing Image Super-Resolution}, 
   year={2024},
   volume={33},
-  pages={1-15},
+  number={},
+  pages={738-752},
   doi={10.1109/TIP.2023.3349004}
 }
 ```
