@@ -8,9 +8,8 @@ import torch.backends.cudnn as cudnn
 import torchvision.transforms as transform
 from os import listdir
 import math
-# ---加载模型结构---
-from model_archs.hat_mynet import HAT
-# from model_archs.esrt import ESRT as net
+# ---load model architecture---
+from model_archs.TTST_arc import TTST
 import glob
 import numpy as np
 import socket
@@ -27,11 +26,11 @@ parser.add_argument('--threads', type=int, default=0, help='number of threads fo
 parser.add_argument('--seed', type=int, default=123, help='random seed to use. Default=123')
 parser.add_argument('--gpus', default=1, type=int, help='number of gpu')
 
-parser.add_argument('--data_dir', type=str, default='D:\SISR\Dataset/train/')
+parser.add_argument('--data_dir', type=str, default='D:/SISR/Dataset/test/DIOR1000')
 
-parser.add_argument('--model_type', type=str, default='hat')
-parser.add_argument('--pretrained_sr', default='saved_models/hat_mynet/18-48-48/hat_mynet_epoch_357.pth', help='sr pretrained base model')
-parser.add_argument('--save_folder', default='D:\SISR\Dataset/train\SwinIR-fake-HR/', help='Location to save checkpoint models')
+parser.add_argument('--model_type', type=str, default='ttst')
+parser.add_argument('--pretrained_sr', default='saved_models/ttst_4x.pth', help='sr pretrained base model')
+parser.add_argument('--save_folder', default='results/', help='Location to save checkpoint models')
 
 opt = parser.parse_args()
 gpus_list = range(opt.gpus)
@@ -63,24 +62,7 @@ def print_network(net):
 torch.cuda.manual_seed(opt.seed)
 device = 'cuda:0'
 print('===> Building model ', opt.model_type)
-# model = GRL(
-#         upscale=4,
-#         img_size=64,
-#         window_size=8,
-#         depths=[4, 4, 8, 8, 8, 4, 4],
-#         embed_dim=180,
-#         num_heads_window=[3, 3, 3, 3, 3, 3, 3],
-#         num_heads_stripe=[3, 3, 3, 3, 3, 3, 3],
-#         mlp_ratio=2,
-#         qkv_proj_type="linear",
-#         anchor_proj_type="avgpool",
-#         anchor_window_down_factor=2,
-#         out_proj_type="linear",
-#         conv_type="1conv",
-#         upsampler="pixelshuffle",
-#         local_connection=True,
-#     )
-model = HAT()
+model = TTST()
 model = torch.nn.DataParallel(model, device_ids=gpus_list)
 print('---------- Networks architecture -------------')
 print_network(model)
@@ -89,7 +71,7 @@ model = model.cuda(gpus_list[0])
 model_name = os.path.join(opt.pretrained_sr)
 if os.path.exists(model_name):
     # model= torch.load(model_name, map_location=lambda storage, loc: storage)
-    model.load_state_dict(torch.load(model_name, map_location=lambda storage, loc: storage))
+    model.load_state_dict(torch.load(model_name))
     print('Pre-trained SR model is loaded.')
 else:
     print('No pre-trained model!!!!')
