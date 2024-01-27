@@ -23,6 +23,7 @@ git clone https://github.com/XY-boy/TTST.git
  > * Python 3.9.13
  > * PyTorch 1.9.1
  > * Torchvision 0.10.1
+ > * basicsr 1.4.2 
 
 ## 🎁 Dataset
 Please download the following remote sensing benchmarks:
