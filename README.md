@@ -35,15 +35,16 @@ Please download the following remote sensing benchmarks:
 - **Step I.**  Use the structure below to prepare your dataset.
 
 /xxxx/xxx/ (your data path)
-
-&emsp;|&ensp;GT--  
-&emsp;&emsp;&emsp;| 000.png  
-&emsp;&emsp;&emsp;| ···.png  
-&emsp;&emsp;&emsp;| 099.png  
-&emsp;|&ensp;LR---   
-&emsp;&emsp;&emsp;| 000.png  
-&emsp;&emsp;&emsp;| ···.png  
-&emsp;&emsp;&emsp;| 099.png 
+```
+/GT/ 
+   /000.png  
+   /···.png  
+   /099.png  
+/LR/ 
+   /000.png  
+   /···.png  
+   /099.png  
+```
 - **Step II.**  Change the `--data_dir` to your data path.
 - **Step III.**  Run the eval_4x.py
 ```
