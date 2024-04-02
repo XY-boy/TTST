@@ -74,8 +74,12 @@ class CAB(nn.Module):
     def forward(self, x):
         return self.cab(x)
 
-##  Top-K Selective Attention (TTSA)
+
 class Attention(nn.Module):
+     """Top-K Selective Attention (TTSA)
+    Tips:
+        Mainly borrows from DRSFormer (https://github.com/cschenxiang/DRSformer)
+    """
     def __init__(self, dim, num_heads, bias):
         super(Attention, self).__init__()
         self.num_heads = num_heads
@@ -320,6 +324,10 @@ class WindowAttention(nn.Module):
 
 # --------- Global Context Attention (Optional) -----------------------
 class GCA(nn.Module):
+    """
+    Tips:
+        Mainly borrows from SKNet (https://github.com/implus/SKNet)
+    """
     def __init__(self, dim):
         super().__init__()
         # K = d*(k_size-1)+1
