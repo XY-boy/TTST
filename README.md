@@ -64,6 +64,10 @@ python train_4x.py
 ### Visual
  ![image](/fig/dota.png)
 
+## Acknowledgments
+Our TTST mainly borrows from [DRSFormer](https://github.com/cschenxiang/DRSformer) and [SKNet](https://github.com/implus/SKNet).  
+Thanks for these excellent open-source works!
+
 ## Contact
 If you have any questions or suggestions, feel free to contact me.  
 Email: xiao_yi@whu.edu.cn; xy574475@gmail.com
