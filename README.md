@@ -31,6 +31,8 @@ Please download the following remote sensing benchmarks:
 | :----: | :-----: | :----: | :----: | :----: |
 |Training | [Download](https://captain-whu.github.io/AID/) | None | None | None |
 |Testing | [Download](https://captain-whu.github.io/AID/) | [Download](https://captain-whu.github.io/DOTA/dataset.html) | [Download](https://drive.google.com/drive/folders/1UdlgHk49iu6WpcJ5467iT-UqNPpx__CC) | [Download](https://onedrive.live.com/?authkey=%21AHHNaHIlzp%5FIXjs&id=5C5E061130630A68%21107&cid=5C5E061130630A68&parId=root&parQt=sharedby&o=OneUp)
+
+🚩Please refer to [Dataset Processing](https://github.com/XY-boy/TTST/tree/main/dataload) to build the LR-HR training pairs.
 ## 🧩 Usage
 ### Quick Test
 [Download Pre-trained Model](https://github.com/XY-boy/TTST/blob/main/saved_models/ttst_4x.pth)
